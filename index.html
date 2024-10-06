@@ -8,13 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Customer Record App</h1>
+        <header>
+            <h1>Customer Management</h1>
+        </header>
         <form id="customerForm">
-            <input type="text" id="customerName" placeholder="Enter customer name" required>
-            <input type="text" id="customerEmail" placeholder="Enter customer email" required>
+            <input type="text" id="customerName" placeholder="Customer Name" required>
+            <input type="email" id="customerEmail" placeholder="Customer Email" required>
             <button type="submit">Add Customer</button>
         </form>
-        <div id="customerList"></div>
+        <ul id="customerList"></ul>
     </div>
     <script src="script.js"></script>
 </body>
