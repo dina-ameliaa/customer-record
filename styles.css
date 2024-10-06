@@ -1,46 +1,86 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+body, html {
     padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 .container {
-    text-align: center;
-    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-form {
+header {
     margin-bottom: 20px;
 }
 
-input[type="text"] {
+h1 {
+    color: #0066cc;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+    flex: 1 1 40%; /* Adjust the flex-basis as per your layout */
     padding: 10px;
-    margin-right: 8px;
+    margin: 5px;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 button {
-    padding: 10px 20px;
+    flex: 1 1 100%;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
-    background-color: #0066cc;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #007bff;
+    position: relative;
+}
+
+button.delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
     color: white;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-#customerList {
-    margin-top: 20px;
+button.delete:hover {
+    background-color: #c82333;
 }
